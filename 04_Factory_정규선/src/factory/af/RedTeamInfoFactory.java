@@ -2,14 +2,14 @@ package factory.af;
 
 public class RedTeamInfoFactory implements AbstractTeamInfoFactory {
 	@Override
-	public String createTeamName() {
+	public TeamName createTeamName() {
 		// TODO Auto-generated method stub
-		return "Red Team";
+		return new RedTeamName();
 	}
 
 	@Override
-	public String createTeamMessage() {
+	public TeamMessage createTeamMessage() {
 		// TODO Auto-generated method stub
-		return "Red Team Message";
+		return new RedTeamMessage();
 	}
 }
