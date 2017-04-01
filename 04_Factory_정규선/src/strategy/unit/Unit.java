@@ -155,10 +155,17 @@ public class Unit implements Observer{
 	};
 	
 	public void setting(Unit unit){
+		this.type = unit.getType();
 		this.health = unit.getHealth();
 		this.weapon = unit.getWeapon();
 		this.movement = unit.getMovement();
 		this.attack = unit.getAttack();
+		this.locationX = unit.getLocationX();
+		this.locationY = unit.getLocationY();
+	}
+	public void prepare() {
+		// TODO Auto-generated method stub
+		System.out.println("Please Overriding prepare()");
 	}
 	
 }

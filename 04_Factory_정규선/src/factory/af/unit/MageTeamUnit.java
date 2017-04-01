@@ -6,46 +6,19 @@ import factory.af.TeamName;
 import strategy.behavior.attack.*;
 import strategy.behavior.movement.*;
 import strategy.behavior.weapon.*;
+import strategy.unit.Mage;
 import strategy.unit.Unit;
-//TODO ¿øº»
-//public class MageTeamUnit extends TeamUnit {
-//	AbstractTeamInfoFactory atf;
-//
-//	public MageTeamUnit(AbstractTeamInfoFactory atf) {
-//		super();
-//		this.atf = atf;
-//		type = "Mage";
-//		health=20;
-//		
-//		attack = new CastFireball();
-//		movement = new Teleport();
-//		weapon = new Staff();
-//	}
-//
-//	@Override
-//	public void prepare() {
-//		// TODO Auto-generated method stub
-//		teamMessage = atf.createTeamMessage();
-//		teamName	= atf.createTeamName();
-//	}
-//	
-//	
-//}
 
-public class MageTeamUnit extends Unit {
+public class MageTeamUnit extends TeamUnit {
 	AbstractTeamInfoFactory atf;
-	public String teamMessage;
-	public String teamName;
+	public TeamMessage teamMessage;
+	public TeamName teamName;
 	
 	public MageTeamUnit(AbstractTeamInfoFactory atf) {
 		super();
 		this.atf = atf;
-		type = "Mage";
-		health=20;
 		
-		attack = new CastFireball();
-		movement = new Teleport();
-		weapon = new Staff();
+		this.setting(new Mage());
 		
 	}
 
@@ -57,26 +30,9 @@ public class MageTeamUnit extends Unit {
 	}
 	
 	public String toString(){
-		return "teamMessage: " + this.teamMessage + "teamName: " + this.teamName + "\n" + super.toString();  
+		return "teamMessage: " + this.teamMessage + "\t teamName: " + this.teamName + "\n" + super.toString();  
 	}
 
-//	public TeamMessage getTeamMessage() {
-//		return teamMessage;
-//	}
-//
-//	public void setTeamMessage(TeamMessage teamMessage) {
-//		this.teamMessage = teamMessage;
-//	}
-//
-//	public TeamName getTeamName() {
-//		return teamName;
-//	}
-//
-//	public void setTeamName(TeamName teamName) {
-//		this.teamName = teamName;
-//	}
-	
-	
 	
 	
 }

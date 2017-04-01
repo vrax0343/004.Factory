@@ -16,18 +16,7 @@ public abstract class TeamUnit extends Unit{
 	TeamInfo teamInfo;
 	
 	
-//	public AttackBehavior attack = null;
-//	public MovementBehavior movement = null;
-//	public WeaponBehavior weapon=null;
-//	
-//	public String type="";
-//	public int locationX=GenerateRandomPosition.generate(), locationY=GenerateRandomPosition.generate();
-//	public int health=0;
-//	
-	
-	
-	
-	public abstract void prepare();
+	public abstract void prepareTeamInfo();
 	
 
 	public TeamUnit() {
@@ -56,11 +45,4 @@ public abstract class TeamUnit extends Unit{
 		
 	}
 
-//	public void print() {
-//		// TODO Auto-generated method stub
-//		System.out.println("Name: " + name);
-//		System.out.println("Type: " + type);
-//		System.out.println(("location: ("+locationX+","+locationY+ ")"));
-//		System.out.println(("health: "+health + "\n"));
-//	}
 }

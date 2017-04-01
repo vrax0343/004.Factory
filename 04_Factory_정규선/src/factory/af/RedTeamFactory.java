@@ -11,23 +11,19 @@ public class RedTeamFactory extends TeamFactoryStore {
 	public Unit createTeamUnit(String item) {
 		// TODO Auto-generated method stub
 		Unit teamUnit = null;
-		AbstractTeamInfoFactory atf = new BlueTeamInfoFactory();
+		AbstractTeamInfoFactory atf = new RedTeamInfoFactory();
 		
 		if (item.equals("Mage")) {
 			teamUnit = new MageTeamUnit(atf);
 			teamUnit.prepareTeamInfo();
-//			teamUnit.setName("레드 법사");
 
 		}else if (item.equals("Civilian")) {
 			teamUnit = new CivilianTeamUnit(atf);
 			teamUnit.prepareTeamInfo();
-//			teamUnit.setName("레드 시민");
 		}else if (item.equals("Knight")) {
 			teamUnit = new KnightTeamUnit(atf);
 			teamUnit.prepareTeamInfo();
-//			teamUnit.setName("레드 기사");
 		}
-//		teamUnit.setTeamName("레드");
 		return teamUnit;
 	}
 

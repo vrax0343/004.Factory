@@ -41,23 +41,24 @@ public class MainTest {
 		bu = btf.makeUnit("Mage");
 		System.out.println(bu);
 		bu = btf.makeUnit("Civilian");
+		System.out.println(bu);
 		bu = btf.makeUnit("Knight");
-//		System.out.println(bu.getTeamName());
-		
-//		Print.printOne(bu);
-//		Print.printOne(bu);
+		System.out.println(bu);
 
-//		
-//		System.out.println("=======================================================");
-//		System.out.println("3. 추상 팩토리패턴을 이용하여 적팀유닛을 종류별로 생성한다. (기본 정보출력)");
-//		System.out.println("=======================================================");
-//		
-//		ru = rtf.makeUnit("Mage");
-//		ru = rtf.makeUnit("Civilian");
-//		ru = rtf.makeUnit("Knight");
-//		System.out.println();
-//		
-//		
+		
+		System.out.println("=======================================================");
+		System.out.println("3. 추상 팩토리패턴을 이용하여 적팀유닛을 종류별로 생성한다. (기본 정보출력)");
+		System.out.println("=======================================================");
+		
+		ru = rtf.makeUnit("Mage");
+		System.out.println(ru);
+		ru = rtf.makeUnit("Civilian");
+		System.out.println(ru);
+		ru = rtf.makeUnit("Knight");
+		System.out.println(ru);
+		System.out.println();
+		
+		
 		
 		TeamFactoryStore redTeam = new RedTeamFactory();
 		TeamFactoryStore blueTeam = new BlueTeamFactory();
